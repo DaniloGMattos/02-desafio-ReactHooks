@@ -1,4 +1,3 @@
-import React from "react";
 import {
   MdDelete,
   MdAddCircleOutline,
@@ -20,10 +19,10 @@ interface Product {
 const Cart = (): JSX.Element => {
   const { cart, removeProduct, updateProductAmount } = useCart();
 
-  const cartFormatted = cart.map((product) => ({
-    ...product,
-    price: formatPrice(product.price * product.amount),
-  }));
+  // const cartFormatted = cart.map((product) => ({
+  //   ...product,
+  //   price: formatPrice(product.price * product.amount),
+  // }));
   const total = formatPrice(
     cart.reduce((sumTotal, product) => {
       // TODO
